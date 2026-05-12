@@ -41,7 +41,8 @@
 # * http: an external HTTP URL is contacted to perform authentication
 # * jwt: an external identity server provides authentication through JWTs
 authMethod: http
-authHTTPAddress: https://cctv.itmoscow/api/users/check_token
+authHTTPAddress: https://cctv_backend/api/users/check_token
+# authHTTPAddress: https://cctv.itmoscow/api/users/check_token
 authHTTPFingerprint: E27A68F05F05CB7CA9BABE71402024159E3C938AC93ADE627BE79C72965E916C
 
 
