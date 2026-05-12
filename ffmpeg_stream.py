@@ -4,6 +4,7 @@ import requests
 from config import settings
 
 requested_camera = sys.argv[1]
+print(requested_camera)
 requested_camera = requested_camera.split("/")[0]
 
 camera_request = requests.get(
@@ -47,6 +48,7 @@ def main():
         ]
     )
 
+    print(cmd)
     subprocess.run(cmd)
 
 

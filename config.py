@@ -16,6 +16,6 @@ class Settings(BaseSettings):
 
     @property
     def media_server_rtsp_base_url(self) -> str:
-        return f"rtsp://{self.MEDIA_SERVER_HOST}:{self.MEDIA_SERVER_PORT}/{settings.MEDIA_SERVER_PATH}/"
+        return f"rtsp://{self.MEDIA_SERVER_HOST}:{self.MEDIA_SERVER_PORT}/{settings.MEDIA_SERVER_PATH}"
     
 settings = Settings()
