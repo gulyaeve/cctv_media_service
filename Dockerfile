@@ -1,7 +1,6 @@
 FROM python:3.14
 
 FROM bluenviron/mediamtx:1 AS mediamtx
-FROM ghcr.io/astral-sh/uv:latest AS uv
 
 COPY --from=mediamtx /mediamtx /
 
@@ -14,7 +13,7 @@ RUN apt update && apt install -y \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-COPY --from=uv /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
 # As volumes
 # COPY ./mediamtx.yml /
