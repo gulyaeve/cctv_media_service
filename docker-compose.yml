@@ -1,9 +1,9 @@
 services:
-  media:
+  cctv_media:
     build:
       context: .
-    image: media
-    container_name: media
+    image: cctv_media
+    container_name: cctv_media
     volumes:
       - ./mediamtx.yml:/mediamtx.yml
       - ./ffmpeg_stream.py:/ffmpeg_stream.py
