@@ -5,7 +5,7 @@ services:
     image: cctv_media
     container_name: cctv_media
     volumes:
-      - ./mediamtx.yml:/mediamtx.yml
+      - ./mediamtx.yml:/src/mediamtx.yml
       - ./ffmpeg_stream.py:/ffmpeg_stream.py
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
