@@ -7,7 +7,7 @@ services:
     volumes:
       - ./mediamtx.yml:/src/mediamtx.yml
       - ./ffmpeg_stream.py:/src/ffmpeg_stream.py
-      - ./ffmpeg_stream.py:/src/ffmpeg_stream.py
+      - ./config.py:/src/config.py
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       # - ./cctv.itmoscow.key:/ssl/cctv.itmoscow.key
