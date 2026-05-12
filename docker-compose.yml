@@ -1,0 +1,26 @@
+services:
+  media-service:
+    image: bluenviron/mediamtx:1.17.0
+    container_name: media-service
+    volumes:
+      - ./mediamtx.yml:/mediamtx.yml
+      - ./ffmpeg_stream.py:/ffmpeg_stream.py
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      # - ./cctv.itmoscow.key:/ssl/cctv.itmoscow.key
+      # - ./cctv.itmoscow.crt:/ssl/cctv.itmoscow.crt
+    networks:
+      - default
+    ports:
+    #   - 8554:8554 
+    #   - 1935:1935 
+    #   - 8888:8888 
+    #   - 8890:8890/udp 
+      - 8189:8189/udp 
+      - 8889:8889
+      - 9998:9998
+
+networks:
+  default:
+    name: cctv_network
+    external: yes
