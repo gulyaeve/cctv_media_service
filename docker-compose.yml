@@ -1,7 +1,9 @@
 services:
-  media-service:
-    image: bluenviron/mediamtx:1.17.0
-    container_name: media-service
+  media:
+    build:
+      context: .
+    image: media
+    container_name: media
     volumes:
       - ./mediamtx.yml:/mediamtx.yml
       - ./ffmpeg_stream.py:/ffmpeg_stream.py
