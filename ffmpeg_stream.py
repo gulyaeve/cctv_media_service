@@ -4,6 +4,7 @@ import requests
 from config import settings
 
 requested_camera = sys.argv[1]
+requested_camera = requested_camera.split("/")[0]
 
 camera_request = requests.get(
     f"{settings.CAMERAS_API}/{requested_camera.split("_")[0]}",
