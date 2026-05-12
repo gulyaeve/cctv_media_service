@@ -1,8 +1,6 @@
 FROM python:3.14
 
-FROM bluenviron/mediamtx:1 AS mediamtx
-
-COPY --from=mediamtx /mediamtx /
+COPY --from=bluenviron/mediamtx:1.17.0 /mediamtx /
 
 # add anything you need.
 # RUN apt update && apt install -y \
