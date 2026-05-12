@@ -112,8 +112,6 @@ paths:
   # my_camera:
   #   source: rtsp://my_camera
 
-  # ~ включает режим регулярных выражений
-  # ^media/([0-9]+(?:_p)?)$ — ищет числа, за которыми может следовать _p
   '~^media/([0-9]+(?:_p)?)(/.*)?$':
     runOnDemand: python /src/ffmpeg_stream.py $G1
     runOnDemandRestart: yes
