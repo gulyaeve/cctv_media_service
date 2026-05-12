@@ -29,14 +29,14 @@ def main():
 
     cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error"]
 
-    # cmd.extend(["-rtsp_transport", f"{settings.RTSP_TRANSPORT}"])
-    cmd.extend([
-        "-fflags", "nobuffer",
-        "-flags", "low_delay",
-        "-probesize", "32",
-        "-analyzeduration", "0",
-        "-rtsp_transport", f"{settings.RTSP_TRANSPORT}"
-    ])
+    cmd.extend(["-rtsp_transport", f"{settings.RTSP_TRANSPORT}"])
+    # cmd.extend([
+    #     "-fflags", "nobuffer",
+    #     "-flags", "low_delay",
+    #     "-probesize", "32",
+    #     "-analyzeduration", "0",
+    #     "-rtsp_transport", f"{settings.RTSP_TRANSPORT}"
+    # ])
 
     cmd.extend(
         [
@@ -44,7 +44,7 @@ def main():
             "-c", "copy",
             "-f", "rtsp",
             f"{output_rtsp}?jwt={settings.TOKEN_BEARER}",
-            "-rtsp_transport", "udp"
+            # "-rtsp_transport", "udp"
         ]
     )
 
