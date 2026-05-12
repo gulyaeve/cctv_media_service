@@ -4,6 +4,8 @@ services:
       context: .
     image: cctv_media
     container_name: cctv_media
+    env_file:
+      - .env
     volumes:
       - ./mediamtx.yml:/src/mediamtx.yml
       - ./ffmpeg_stream.py:/src/ffmpeg_stream.py
